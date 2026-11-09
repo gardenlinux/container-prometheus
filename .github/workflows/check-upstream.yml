@@ -120,7 +120,7 @@ jobs:
             git commit -m "chore: bump default version to ${VERSION}"
           git push --force-with-lease origin "${BRANCH}"
 
-          if ! gh pr view "${BRANCH}" --repo "${{ github.repository }}" >/dev/null 2>&1; then
+          if ! gh pr view "${BRANCH}" --repo "${{ github.repository }}"; then
             gh pr create \
               --repo "${{ github.repository }}" \
               --base main \
