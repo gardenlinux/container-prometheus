@@ -2,7 +2,7 @@ name: Check upstream Prometheus release
 
 on:
   schedule:
-    - cron: '17 6 * * *'
+    - cron: '45 2 * * *'
   workflow_dispatch:
     inputs:
       upstream_repo:
